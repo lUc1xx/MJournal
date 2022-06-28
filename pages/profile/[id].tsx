@@ -1,11 +1,13 @@
 import { Avatar, Button, Paper, Tab, Tabs, Typography } from "@material-ui/core";
 import { MessageOutlined, SettingsOutlined } from "@material-ui/icons";
+import Post from "components/Post";
+import MainLayout from "layouts/MainLayout";
 import { NextPage } from "next"
 import Link from "next/link";
 
 const Profile: NextPage = () => {
     return (
-        <MainLayout contentFullWitdh hideComments>
+        <MainLayout contentFullWidth hideComments>
             <Paper elevation={0}>
                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <div>

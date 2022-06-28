@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import LeftMenu from '../../components/LeftMenu';
-import SideComments from '../../components/SideComments';
+import LeftMenu from 'components/LeftMenu';
+import SideComments from 'components/SideComments';
 import s from './index.module.scss';
 
 interface Props {
@@ -8,22 +8,27 @@ interface Props {
     hideComments?: boolean
     contentFullWidth?: boolean
     className?: string
+    leftSide?: boolean
 }
 
 const MainLayout: React.FC<Props> = (props: Props): React.ReactElement => {
-    const { children, hideComments, contentFullWidth, className } = props;
+    const { children, hideComments, contentFullWidth, className, leftSide } = props;
     return (
         <div className={clsx(s.wrapper, className)}>
-            <div className={s.leftSide}>
-                <LeftMenu/>
-            </div>
+
+            {!leftSide && (
+                <div className={s.leftSide}>
+                    <LeftMenu />
+                </div>
+            )}
+
             <div className={clsx(s.content, contentFullWidth ? s.content__full : "")}>
                 {children}
             </div>
 
             {!hideComments && (
                 <div className={s.rightSide}>
-                    <SideComments/>
+                    <SideComments />
                 </div>
             )}
         </div>

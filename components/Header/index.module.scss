@@ -1,15 +1,58 @@
 .wrapper {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 640px) 320px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    background-color: #fff4e2 !important;
+    height: 60px;
+}
+
+.content {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftSide {
     display: flex;
     align-items: center;
 }
 
-.block {
+.rightSide {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.avatar {
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
 }
 
-.avatar {}
+.search {
+    height: 43px;
+    width: 100%;
+    max-width: 380px;
 
-.search {}
+    input {
+        color: #000;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        background: #ffeace;
+        outline: none;
+        border-radius: 9px;
+        padding-left: 20px;
+        border: none;
+    }
+}
 
 .penButton {}

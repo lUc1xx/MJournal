@@ -1,4 +1,5 @@
 import { Button, Divider, Paper, TextField, Typography } from "@material-ui/core";
+import MainLayout from "layouts/MainLayout";
 import { NextPage } from "next"
 
 const Settings: NextPage = () => {

@@ -15,18 +15,20 @@ const Post: React.FC = (): React.ReactElement => {
                     </a>
                 </Link>
             </Typography>
-            <Typography>
+            <Typography className={s.text}>
                 Пока одни не могли соотнести размеры животного и окружения, другие начали создавать апокалиптические сюжеты с котом в главной роли.
             </Typography>
 
-            <Image
-                src="https://leonardo.osnova.io/a21ca5a9-d95b-560d-9a6f-9fa87eff7fcd/-/preview/600/-/format/webp/"
-                height={500}
-                width={600}
-                alt="alt"
-            />
+            <div className={s.image}>
+                <Image
+                    src="https://leonardo.osnova.io/a21ca5a9-d95b-560d-9a6f-9fa87eff7fcd/-/preview/600/-/format/webp/"
+                    height={500}
+                    width={640}
+                    alt="alt"
+                />
+            </div>
 
-            <PostActions/>
+            <PostActions />
         </Paper>
     )
 }
